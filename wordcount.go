@@ -4,13 +4,12 @@ import (
 	"fmt"
 	"bufio"
 	"os"
+	"strings"
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	count := 0
-	for scanner.Scan() {
-		count++
-	}
-	fmt.Print(count)
+	rdr := bufio.NewReader(os.Stdin)
+	str,_ := rdr.ReadString('\n')
+	arr := strings.Split(str," ")
+	fmt.Print(len(arr))
 }
